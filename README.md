@@ -25,7 +25,16 @@ Integrantes del Equipo
 
 Sitios de Referencia
 - CompraGamer: Nos hemos inspirado en este sitio web ya que es un e-commerce que vende artículos similares al nuestro y que apunta a un mismo público, además de que era un sitio que conocíamos por lo que ya estabamos familiarizados con su interfaz.
-- Op 2:
-- Op 3:
-- Op 4:
-- Op 5:
+url: https://compragamer.com/index.php
+
+- TecnoFel:
+url: https://tecnofel.cl/nuestras-marcas/
+
+- BestStore:
+url: https://www.beststore.cl/
+
+- WPG E-Commerce:
+url: https://www.wpg-ecommerce.com.ar/
+
+- Tecno-Site:
+url: https://tienda.tecno-site.com/
