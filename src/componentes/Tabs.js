@@ -114,10 +114,26 @@ export default function BasicTabs() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab sx={{ fontWeight: 'bold', fontSize: 18 }} label="Inicio" {...a11yProps(0)} />
-            <Tab sx={{ fontWeight: 'bold', fontSize: 18 }} label="Tienda" {...a11yProps(1)} />
-            <Tab sx={{ fontWeight: 'bold', fontSize: 18 }} label="Nosotros" {...a11yProps(2)} />
-            <Tab sx={{ fontWeight: 'bold', fontSize: 18 }} label="Contacto" {...a11yProps(3)} />
+            <Tab
+              sx={{ fontWeight: "bold", fontSize: 18 }}
+              label="Inicio"
+              {...a11yProps(0)}
+            />
+            <Tab
+              sx={{ fontWeight: "bold", fontSize: 18 }}
+              label="Tienda"
+              {...a11yProps(1)}
+            />
+            <Tab
+              sx={{ fontWeight: "bold", fontSize: 18 }}
+              label="Nosotros"
+              {...a11yProps(2)}
+            />
+            <Tab
+              sx={{ fontWeight: "bold", fontSize: 18 }}
+              label="Contacto"
+              {...a11yProps(3)}
+            />
           </Tabs>
         </Box>
         <Box
@@ -126,14 +142,14 @@ export default function BasicTabs() {
             borderColor: "transparent",
             gridColumn: "2",
             display: "center",
-            bgcolor: 'transparent',
-            borderWidth: '5px'
+            bgcolor: "transparent",
+            borderWidth: "5px",
           }}
         >
           <Search />
         </Box>
       </Box>
-      <Box sx={{ bgcolor: 'black' }}>
+      <Box sx={{ bgcolor: "black" }}>
         <TabPanel value={value} index={0}>
           <Box
             sx={{
@@ -151,114 +167,240 @@ export default function BasicTabs() {
                   borderColor: "divider",
                 }}
               >
-                <Typography sx={{ fontWeight: 'bold', fontSize: 30, color: 'black' }}>OFERTAS!
-                  <img src={oferta} style={{
-                    marginLeft: "2px"
-                  }}></img>
+                <Typography
+                  sx={{ fontWeight: "bold", fontSize: 30, color: "black" }}
+                >
+                  OFERTAS!
+                  <img
+                    src={oferta}
+                    style={{
+                      marginLeft: "2px",
+                    }}
+                  ></img>
                 </Typography>
                 <br />
                 <Box>
-                  <Typography gutterBottom sx={{ fontWeight: 'bold', fontSize: 15, color: 'black' }}>Las ofertas de este mes</Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{ fontWeight: "bold", fontSize: 15, color: "black" }}
+                  >
+                    Las ofertas de este mes
+                  </Typography>
                 </Box>
-                <Box sx={{ width: '165px', borderTop: 4, marginLeft: 'auto', marginRight: 'auto' }}></Box>
+                <Box
+                  sx={{
+                    width: "165px",
+                    borderTop: 4,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                ></Box>
               </Box>
-              <div style={{ width: '100%' }}>
+              <div style={{ width: "100%" }}>
                 <Box
                   sx={{
                     display: "grid",
                     gridTemplateColumns: "repeat (4, 1fr)",
                   }}
                 >
-                  <Item sx={{ gridColumn: '1', height: '350px' }}>
+                  <Item sx={{ gridColumn: "1", height: "350px" }}>
                     <img
                       src={producto1}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>450</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        450
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '2', height: '350px' }}>
+                  <Item sx={{ gridColumn: "2", height: "350px" }}>
                     <img
                       src={producto2}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>4500</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        4500
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '3', height: '350px' }}>
+                  <Item sx={{ gridColumn: "3", height: "350px" }}>
                     <img
                       src={producto3}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>4000</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        4000
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '4', height: '350px' }}>
+                  <Item sx={{ gridColumn: "4", height: "350px" }}>
                     <img
                       src={producto4}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>6500</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        6500
+                      </Typography>
                     </Box>
                   </Item>
                 </Box>
               </div>
             </Item>
-            <Item sx={{ height: '250px', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-              <Box sx={{ gridColumn: '1' }}>
-                <Typography sx={{ position: 'absolute', zIndex: 9, marginLeft: '40px', marginTop: '20px', color: 'white', fontSize: 20 }}>PERIFÉRICOS</Typography>
+            <Item
+              sx={{
+                height: "250px",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+              }}
+            >
+              <Box sx={{ gridColumn: "1" }}>
+                <Typography
+                  sx={{
+                    position: "absolute",
+                    zIndex: 9,
+                    marginLeft: "40px",
+                    marginTop: "20px",
+                    color: "white",
+                    fontSize: 20,
+                  }}
+                >
+                  PERIFÉRICOS
+                </Typography>
                 <img
                   src={perifericos}
                   style={{
                     height: "220px",
                     width: "98%",
-                    position: 'relative',
-                    zIndex: 1
+                    position: "relative",
+                    zIndex: 1,
                   }}
                 />
               </Box>
-              <Box sx={{ gridColumn: '2' }}>
-                <Typography sx={{ position: 'absolute', zIndex: 9, marginLeft: '40px', marginTop: '20px', color: 'white', fontSize: 20 }}>AUDIO</Typography>
+              <Box sx={{ gridColumn: "2" }}>
+                <Typography
+                  sx={{
+                    position: "absolute",
+                    zIndex: 9,
+                    marginLeft: "40px",
+                    marginTop: "20px",
+                    color: "white",
+                    fontSize: 20,
+                  }}
+                >
+                  AUDIO
+                </Typography>
                 <img
                   src={audio}
                   style={{
@@ -276,94 +418,192 @@ export default function BasicTabs() {
                   borderColor: "divider",
                 }}
               >
-                <Typography sx={{ fontWeight: 'bold', fontSize: 30, color: 'black' }}>PRODUCTOS RECOMENDADOS
-                  <img src={like} style={{
-                    marginLeft: "2px"
-                  }}></img>
+                <Typography
+                  sx={{ fontWeight: "bold", fontSize: 30, color: "black" }}
+                >
+                  PRODUCTOS RECOMENDADOS
+                  <img
+                    src={like}
+                    style={{
+                      marginLeft: "2px",
+                    }}
+                  ></img>
                 </Typography>
                 <br />
                 <Box>
-                  <Typography gutterBottom sx={{ fontWeight: 'bold', fontSize: 15, color: 'black' }}>NUESTROS MEJORES PRODUCTOS</Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{ fontWeight: "bold", fontSize: 15, color: "black" }}
+                  >
+                    NUESTROS MEJORES PRODUCTOS
+                  </Typography>
                 </Box>
-                <Box sx={{ width: '240px', borderTop: 4, marginLeft: 'auto', marginRight: 'auto' }}></Box>
+                <Box
+                  sx={{
+                    width: "240px",
+                    borderTop: 4,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                ></Box>
               </Box>
-              <Box sx={{ width: '100%' }}>
+              <Box sx={{ width: "100%" }}>
                 <Box
                   sx={{
                     display: "grid",
                     gridTemplateColumns: "repeat (4, 1fr)",
                   }}
                 >
-                  <Item sx={{ gridColumn: '1', height: '350px' }}>
+                  <Item sx={{ gridColumn: "1", height: "350px" }}>
                     <img
                       src={producto1}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>450</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        450
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '2', height: '350px' }}>
+                  <Item sx={{ gridColumn: "2", height: "350px" }}>
                     <img
                       src={producto2}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>4500</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        4500
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '3', height: '350px' }}>
+                  <Item sx={{ gridColumn: "3", height: "350px" }}>
                     <img
                       src={producto3}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>4000</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        4000
+                      </Typography>
                     </Box>
                   </Item>
-                  <Item sx={{ gridColumn: '4', height: '350px' }}>
+                  <Item sx={{ gridColumn: "4", height: "350px" }}>
                     <img
                       src={producto4}
                       style={{
                         height: "220px",
                         width: "220px",
-                        marginBottom: "10px"
+                        marginBottom: "10px",
                       }}
                     />
-                    <Typography sx={{ display: "flex", color: 'grey', fontSize: '14px' }}>PERIFÉRICOS / MOUSE</Typography>
-                    <Typography sx={{ display: "flex", fontSize: '15px', fontWeight: 'bold' }}>MOUSE REDRAGON IMPACT</Typography>
-                    <Box sx={{ display: "flex", marginTop: '10px' }}>
-                      <Button variant="outlined" color="inherit" sx={{ borderRadius: '15px', padding: '0px 6px' }}>
+                    <Typography
+                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
+                    >
+                      PERIFÉRICOS / MOUSE
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        fontSize: "15px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      MOUSE REDRAGON IMPACT
+                    </Typography>
+                    <Box sx={{ display: "flex", marginTop: "10px" }}>
+                      <Button
+                        variant="outlined"
+                        color="inherit"
+                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
+                      >
                         AGREGAR AL CARRITO
                       </Button>
-                      <Typography sx={{ marginLeft: 'auto', fontWeight: 'bold' }}>6500</Typography>
+                      <Typography
+                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
+                      >
+                        6500
+                      </Typography>
                     </Box>
                   </Item>
                 </Box>
@@ -382,46 +622,50 @@ export default function BasicTabs() {
               flexDirection: "column",
             }}
           >
-            <Typography sx={{ textAlign: "left" }}>
-              Nuestro sitio web se dedica a la venta de hardware y periféricos de
-              computadoras. Dentro de ésto nos encontramos con una Tienda llena de
-              productos dentro del rubro de la tecnología, tales como elementos de
-              Computadoras en categorías de:
+            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
+              Nuestro sitio web se dedica a la venta de hardware y periféricos
+              de computadoras. Dentro de ésto nos encontramos con una Tienda
+              llena de productos dentro del rubro de la tecnología, tales como
+              elementos de Computadoras en categorías de:
             </Typography>
             <Box
               sx={{
                 marginLeft: "auto",
                 marginRight: "auto",
+                color: "#f5f5f5"
               }}
             >
-              <Typography sx={{ textAlign: "left" }}>
+              <Typography sx={{ textAlign: "left"}}>
                 - Periféricos (Mouses, Teclados, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left" }}>
+              <Typography sx={{ textAlign: "left"}}>
                 - Audio (Auriculares, Parlantes, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left" }}>
+              <Typography sx={{ textAlign: "left"}}>
                 - Video (Pantallas LED, Monitores, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left" }}>- Mantenimiento</Typography>
-              <Typography sx={{ textAlign: "left" }}>
+              <Typography sx={{ textAlign: "left"}}>
+                - Mantenimiento
+              </Typography>
+              <Typography sx={{ textAlign: "left"}}>
                 - Accesorios (Cables Auxiliares, Cables USB, Cables de Video)
               </Typography>
             </Box>
             <br />
-            <Typography sx={{ textAlign: "left" }}>
+            <Typography sx={{ textAlign: "left", color: "#f5f5f5"}}>
               Este sitio está dirigido hacia el público general, pero
               específicamente a aquellos aficionados de la tecnología. Es decir,
-              específico hacia adultos o jóvenes adultos con conocimientos previos
-              de tecnolgía. Nos dedicamos en particular a la Industria del Gaming.
+              específico hacia adultos o jóvenes adultos con conocimientos
+              previos de tecnolgía. Nos dedicamos en particular a la Industria
+              del Gaming.
             </Typography>
             <br />
-            <Typography sx={{ textAlign: "left" }}>
-              Por esta razón, nos enfocaremos en ofrecer productos de calidad y de
-              alta gama, y con una descripción abundante de las especificaciones
-              de cada artículo en nuestra página, para que así nuestro público
-              específico se sienta más interesado y acompañado al momento de su
-              compra.
+            <Typography sx={{ textAlign: "left", color: "#f5f5f5"}}>
+              Por esta razón, nos enfocaremos en ofrecer productos de calidad y
+              de alta gama, y con una descripción abundante de las
+              especificaciones de cada artículo en nuestra página, para que así
+              nuestro público específico se sienta más interesado y acompañado
+              al momento de su compra.
             </Typography>
           </Box>
         </TabPanel>
@@ -429,82 +673,189 @@ export default function BasicTabs() {
           <TextField />
         </TabPanel>
       </Box>
-      <Box sx={{ bgcolor: '#565548', width: '100%', height: '300px', display: 'grid', gridTemplateColumns: 'repeat (3, 1fr)' }}>
-        <Box sx={{ bgcolor: 'black', width: '300px', height: '170px', gridColumn: '1', marginLeft: 'auto', marginRight: 'auto', marginTop: 'auto', marginBottom: 'auto' }}>
-          <Box sx={{ padding: '20px', height: '170px' }}>
+      <Box
+        sx={{
+          bgcolor: "#565548",
+          width: "100%",
+          height: "300px",
+          display: "grid",
+          gridTemplateColumns: "repeat (3, 1fr)",
+        }}
+      >
+        <Box
+          sx={{
+            bgcolor: "black",
+            width: "300px",
+            height: "170px",
+            gridColumn: "1",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "auto",
+            marginBottom: "auto",
+          }}
+        >
+          <Box sx={{ padding: "20px", height: "170px" }}>
             <Typography
               sx={{
-                fontSize: '16px',
-                textAlign: 'left',
-                textTransform: 'uppercase',
-                color: 'white',
-                letterSpacing: '1px',
-                marginBottom: '8px',
-                borderBottom: '1px solid white'
+                fontSize: "16px",
+                textAlign: "left",
+                textTransform: "uppercase",
+                color: "white",
+                letterSpacing: "1px",
+                marginBottom: "8px",
+                borderBottom: "1px solid white",
               }}
             >
               LINKS IMPORTANTES
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Nosotros
               </Link>
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Contacto
               </Link>
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ bgcolor: 'black', width: '300px', height: '170px', gridColumn: '2', marginLeft: 'auto', marginRight: 'auto', marginTop: 'auto', marginBottom: 'auto' }}>
-          <Box sx={{ padding: '20px', height: '170px' }}>
+        <Box
+          sx={{
+            bgcolor: "black",
+            width: "300px",
+            height: "170px",
+            gridColumn: "2",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "auto",
+            marginBottom: "auto",
+          }}
+        >
+          <Box sx={{ padding: "20px", height: "170px" }}>
             <Typography
               sx={{
-                fontSize: '16px',
-                textAlign: 'left',
-                textTransform: 'uppercase',
-                color: 'white',
-                letterSpacing: '1px',
-                marginBottom: '8px',
-                borderBottom: '1px solid white'
+                fontSize: "16px",
+                textAlign: "left",
+                textTransform: "uppercase",
+                color: "white",
+                letterSpacing: "1px",
+                marginBottom: "8px",
+                borderBottom: "1px solid white",
               }}
             >
               INFORMACIÓN
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Mi Cuenta
               </Link>
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Mis Pedidos
               </Link>
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Carrito
               </Link>
             </Typography>
-            <Typography sx={{ color: 'white', textAlign: 'left', fontSize: '16px', marginLeft: '15px' }}>
-              <Link href="#" underline="hover" sx={{ color: 'white', textAlign: 'left' }}>
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "left",
+                fontSize: "16px",
+                marginLeft: "15px",
+              }}
+            >
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "white", textAlign: "left" }}
+              >
                 Checkout
               </Link>
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ bgcolor: 'black', width: '300px', height: '170px', gridColumn: '3', marginLeft: 'auto', marginRight: 'auto', marginTop: 'auto', marginBottom: 'auto' }}>
-          <Box sx={{ padding: '20px', height: '170px' }}>
+        <Box
+          sx={{
+            bgcolor: "black",
+            width: "300px",
+            height: "170px",
+            gridColumn: "3",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "auto",
+            marginBottom: "auto",
+          }}
+        >
+          <Box sx={{ padding: "20px", height: "170px" }}>
             <Typography
               sx={{
-                fontSize: '16px',
-                textAlign: 'left',
-                textTransform: 'uppercase',
-                color: 'white',
-                letterSpacing: '1px',
-                marginBottom: '8px',
-                borderBottom: '1px solid white'
+                fontSize: "16px",
+                textAlign: "left",
+                textTransform: "uppercase",
+                color: "white",
+                letterSpacing: "1px",
+                marginBottom: "8px",
+                borderBottom: "1px solid white",
               }}
             >
               SIGUENOS!
