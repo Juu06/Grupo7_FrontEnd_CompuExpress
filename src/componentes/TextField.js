@@ -29,7 +29,7 @@ export default function FormPropsTextFields() {
       noValidate
       autoComplete="off"
     >
-      <Box>FORMULARIO DE CONTACTO</Box>
+      <Box sx={{color: "#f5f5f5"}}>FORMULARIO DE CONTACTO</Box>
       <br />
       <Box>
         <TextField
@@ -69,7 +69,8 @@ export default function FormPropsTextFields() {
         />
       </Box>
       <Box sx={{
-        display: 'center'
+        display: 'center',
+        color: "#f5f5f5"
       }}>
         <Button />
       </Box>
