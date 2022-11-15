@@ -18,7 +18,14 @@ import { Box } from "@mui/material";
 
 export default function App() {
   return (
-    <Box sx={{width: '1100px', height: '500px', marginLeft: 'auto', marginRight: 'auto'}}>
+    <Box
+      sx={{
+        width: "1100px",
+        height: "500px",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
       <Swiper
         spaceBetween={30}
         effect={"fade"}
@@ -31,27 +38,33 @@ export default function App() {
       >
         <SwiperSlide>
           <img
-              src={slide1}
-              style={{
-                width: '100%', height: '500px'
-              }}
-            />
+            alt=""
+            src={slide1}
+            style={{
+              width: "100%",
+              height: "500px",
+            }}
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
-              src={slide2}
-              style={{
-                width: '100%', height: '500px'
-              }}
-            />
+            alt=""
+            src={slide2}
+            style={{
+              width: "100%",
+              height: "500px",
+            }}
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
-              src={slide3}
-              style={{
-                width: '100%', height: '500px'
-              }}
-            />
+            alt=""
+            src={slide3}
+            style={{
+              width: "100%",
+              height: "500px",
+            }}
+          />
         </SwiperSlide>
       </Swiper>
     </Box>

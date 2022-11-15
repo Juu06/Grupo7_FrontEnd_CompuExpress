@@ -1,59 +1,71 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
+import { IconButton } from "@mui/material";
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    //paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
-      },
-    },
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar({
+  placeholder = "Buscar...",
+  icon = <SearchIcon />,
+  positionIcon = "left",
+}) {
   return (
-    <Box sx={{ flexGrow: 1, bgcolor: 'white', borderRadius: 5 }}>
-      <Search>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Buscar…"
-          inputProps={{ "aria-label": "search" }}
-        />
-      </Search>
+    <Box
+      sx={{
+        flexGrow: 1,
+        bgcolor: "white",
+        borderRadius: 5,
+        marginLeft: 0,
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: positionIcon === "left" ? "1fr 5fr" : "5fr 1fr",
+      }}
+    >
+      {positionIcon === "left" && (
+        <IconButton
+          sx={{
+            paddingLeft: 2,
+            marginRight: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {icon}
+        </IconButton>
+      )}
+
+      <StyledInputBase
+        placeholder={placeholder}
+        inputProps={{ "aria-label": "search" }}
+        sx={{marginLeft: positionIcon === "left" ? '10px' : '20px'}}
+      />
+
+      {positionIcon !== "left" && (
+        <IconButton
+          sx={{
+            paddingLeft: 2,
+            marginRight: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {icon}
+        </IconButton>
+      )}
     </Box>
   );
 }
