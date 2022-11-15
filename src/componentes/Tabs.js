@@ -18,7 +18,10 @@ import perifericos from "../images/other/perifericos.jpg";
 import audio from "../images/other/audio.jpg";
 import like from "../images/icons/good_quality.png";
 import { Button, Link } from "@mui/material";
-
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import SendIcon from "@mui/icons-material/Send";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -172,6 +175,7 @@ export default function BasicTabs() {
                 >
                   OFERTAS!
                   <img
+                    alt=""
                     src={oferta}
                     style={{
                       marginLeft: "2px",
@@ -205,6 +209,7 @@ export default function BasicTabs() {
                 >
                   <Item sx={{ gridColumn: "1", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto1}
                       style={{
                         height: "220px",
@@ -243,6 +248,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "2", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto2}
                       style={{
                         height: "220px",
@@ -281,6 +287,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "3", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto3}
                       style={{
                         height: "220px",
@@ -319,6 +326,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "4", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto4}
                       style={{
                         height: "220px",
@@ -379,6 +387,7 @@ export default function BasicTabs() {
                   PERIFÉRICOS
                 </Typography>
                 <img
+                  alt=""
                   src={perifericos}
                   style={{
                     height: "220px",
@@ -402,6 +411,7 @@ export default function BasicTabs() {
                   AUDIO
                 </Typography>
                 <img
+                  alt=""
                   src={audio}
                   style={{
                     height: "220px",
@@ -423,6 +433,7 @@ export default function BasicTabs() {
                 >
                   PRODUCTOS RECOMENDADOS
                   <img
+                    alt=""
                     src={like}
                     style={{
                       marginLeft: "2px",
@@ -456,6 +467,7 @@ export default function BasicTabs() {
                 >
                   <Item sx={{ gridColumn: "1", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto1}
                       style={{
                         height: "220px",
@@ -494,6 +506,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "2", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto2}
                       style={{
                         height: "220px",
@@ -532,6 +545,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "3", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto3}
                       style={{
                         height: "220px",
@@ -570,6 +584,7 @@ export default function BasicTabs() {
                   </Item>
                   <Item sx={{ gridColumn: "4", height: "350px" }}>
                     <img
+                      alt=""
                       src={producto4}
                       style={{
                         height: "220px",
@@ -632,27 +647,27 @@ export default function BasicTabs() {
               sx={{
                 marginLeft: "auto",
                 marginRight: "auto",
-                color: "#f5f5f5"
+                color: "#f5f5f5",
               }}
             >
-              <Typography sx={{ textAlign: "left"}}>
+              <Typography sx={{ textAlign: "left" }}>
                 - Periféricos (Mouses, Teclados, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left"}}>
+              <Typography sx={{ textAlign: "left" }}>
                 - Audio (Auriculares, Parlantes, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left"}}>
+              <Typography sx={{ textAlign: "left" }}>
                 - Video (Pantallas LED, Monitores, etc.)
               </Typography>
-              <Typography sx={{ textAlign: "left"}}>
+              <Typography sx={{ textAlign: "left" }}>
                 - Mantenimiento
               </Typography>
-              <Typography sx={{ textAlign: "left"}}>
+              <Typography sx={{ textAlign: "left" }}>
                 - Accesorios (Cables Auxiliares, Cables USB, Cables de Video)
               </Typography>
             </Box>
             <br />
-            <Typography sx={{ textAlign: "left", color: "#f5f5f5"}}>
+            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
               Este sitio está dirigido hacia el público general, pero
               específicamente a aquellos aficionados de la tecnología. Es decir,
               específico hacia adultos o jóvenes adultos con conocimientos
@@ -660,7 +675,7 @@ export default function BasicTabs() {
               del Gaming.
             </Typography>
             <br />
-            <Typography sx={{ textAlign: "left", color: "#f5f5f5"}}>
+            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
               Por esta razón, nos enfocaremos en ofrecer productos de calidad y
               de alta gama, y con una descripción abundante de las
               especificaciones de cada artículo en nuestra página, para que así
@@ -860,6 +875,56 @@ export default function BasicTabs() {
             >
               SIGUENOS!
             </Typography>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr",
+                marginBottom: "10px",
+              }}
+            >
+              <FacebookIcon
+                sx={{
+                  color: "white",
+                  cursor: "pointer",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
+              <TwitterIcon
+                sx={{
+                  color: "white",
+                  cursor: "pointer",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
+              <InstagramIcon
+                sx={{
+                  color: "white",
+                  cursor: "pointer",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
+            </Box>
+            <Typography
+              sx={{
+                fontSize: "16px",
+                textAlign: "left",
+                textTransform: "uppercase",
+                color: "white",
+                letterSpacing: "1px",
+                marginBottom: "8px",
+                borderBottom: "1px solid white",
+              }}
+            >
+              SUSCRIBETE!
+            </Typography>
+            <Search
+              positionIcon="right"
+              icon={<SendIcon />}
+              placeholder="Email"
+            />
           </Box>
         </Box>
       </Box>
