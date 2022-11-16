@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, {  } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 import slide1 from "../images/slide-1.jpg";
 import slide2 from "../images/slide-2.jpg";
 import slide3 from "../images/slide-3.jpg";
@@ -9,34 +8,26 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import "./styles.css";
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from "swiper";
 import { Box } from "@mui/material";
 
 export default function App() {
   return (
     <Box
       sx={{
-        width: "1100px",
+        width: "99%",
+        borderRadius: "10px",
         height: "500px",
         marginLeft: "auto",
         marginRight: "auto",
       }}
     >
-      <Swiper
-        spaceBetween={30}
-        effect={"fade"}
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Navigation, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
+      <Carousel showThumbs={false} autoPlay interval={2000} infiniteLoop>
+        <Box sx={{ borderRadius: "10px" }}>
           <img
             alt=""
             src={slide1}
@@ -45,8 +36,8 @@ export default function App() {
               height: "500px",
             }}
           />
-        </SwiperSlide>
-        <SwiperSlide>
+        </Box>
+        <Box sx={{ borderRadius: "10px" }}>
           <img
             alt=""
             src={slide2}
@@ -55,8 +46,8 @@ export default function App() {
               height: "500px",
             }}
           />
-        </SwiperSlide>
-        <SwiperSlide>
+        </Box>
+        <Box sx={{ borderRadius: "10px" }}>
           <img
             alt=""
             src={slide3}
@@ -65,8 +56,8 @@ export default function App() {
               height: "500px",
             }}
           />
-        </SwiperSlide>
-      </Swiper>
+        </Box>
+      </Carousel>
     </Box>
   );
 }

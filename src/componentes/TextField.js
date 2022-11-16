@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Button from "./Button";
+import { Button } from "@mui/material";
 
 export default function FormPropsTextFields() {
   const [name, setName] = React.useState();
@@ -24,12 +24,16 @@ export default function FormPropsTextFields() {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 1, width: "80ch" },
+        "& .MuiTextField-root": { m: 1, width: "70%" },
+        bgcolor: "white",
+        borderRadius: "10px",
+        padding: 2,
+        height: "610px",
       }}
       noValidate
       autoComplete="off"
     >
-      <Box sx={{color: "#f5f5f5"}}>FORMULARIO DE CONTACTO</Box>
+      <Box>FORMULARIO DE CONTACTO</Box>
       <br />
       <Box>
         <TextField
@@ -68,11 +72,24 @@ export default function FormPropsTextFields() {
           rows={6}
         />
       </Box>
-      <Box sx={{
-        display: 'center',
-        color: "#f5f5f5"
-      }}>
-        <Button />
+      <Box
+        sx={{
+          "& .css-w4z10b-MuiStack-root": { justifyContent: "center" },
+        }}
+      >
+        <Button
+          sx={{
+            width: "70%",
+            bgcolor: "#565548",
+            border: "1px solid #565548",
+            color: "black",
+            transition: "0.5s",
+            display: "inline",
+            fontWeight: 'bold'
+          }}
+        >
+          Enviar
+        </Button>
       </Box>
     </Box>
   );

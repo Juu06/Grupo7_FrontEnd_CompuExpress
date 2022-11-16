@@ -160,9 +160,8 @@ export default function BasicTabs() {
               gridTemplateRows: "repeat (3, 1fr)",
             }}
           >
-            <Item>
-              <FotosInicio />
-            </Item>
+            <FotosInicio />
+
             <Item>
               <Box
                 sx={{
@@ -632,12 +631,18 @@ export default function BasicTabs() {
         </TabPanel>
         <TabPanel value={value} index={2}>
           <Box
+            component="form"
             sx={{
-              display: "flex",
-              flexDirection: "column",
+              "& .MuiTextField-root": { m: 1, width: "80ch" },
+              bgcolor: "white",
+              borderRadius: "10px",
+              padding: 2,
+              height: "610px",
             }}
+            noValidate
+            autoComplete="off"
           >
-            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
+            <Typography sx={{ textAlign: "left" }}>
               Nuestro sitio web se dedica a la venta de hardware y periféricos
               de computadoras. Dentro de ésto nos encontramos con una Tienda
               llena de productos dentro del rubro de la tecnología, tales como
@@ -645,9 +650,9 @@ export default function BasicTabs() {
             </Typography>
             <Box
               sx={{
+                width: "50%",
                 marginLeft: "auto",
                 marginRight: "auto",
-                color: "#f5f5f5",
               }}
             >
               <Typography sx={{ textAlign: "left" }}>
@@ -667,7 +672,7 @@ export default function BasicTabs() {
               </Typography>
             </Box>
             <br />
-            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
+            <Typography sx={{ textAlign: "left" }}>
               Este sitio está dirigido hacia el público general, pero
               específicamente a aquellos aficionados de la tecnología. Es decir,
               específico hacia adultos o jóvenes adultos con conocimientos
@@ -675,7 +680,7 @@ export default function BasicTabs() {
               del Gaming.
             </Typography>
             <br />
-            <Typography sx={{ textAlign: "left", color: "#f5f5f5" }}>
+            <Typography sx={{ textAlign: "left" }}>
               Por esta razón, nos enfocaremos en ofrecer productos de calidad y
               de alta gama, y con una descripción abundante de las
               especificaciones de cada artículo en nuestra página, para que así
