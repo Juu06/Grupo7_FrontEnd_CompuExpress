@@ -22,6 +22,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SendIcon from "@mui/icons-material/Send";
+import Tienda from "./Tienda";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -626,8 +627,16 @@ export default function BasicTabs() {
           </Box>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <Navegacion />
-          <RangoPrecios />
+          <Box
+            sx={{
+              bgcolor: "white",
+              borderRadius: "10px",
+              padding: 2,
+              height: "auto"
+            }}
+          >
+            <Tienda />
+          </Box>
         </TabPanel>
         <TabPanel value={value} index={2}>
           <Box
