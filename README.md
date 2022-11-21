@@ -10,7 +10,7 @@ Nuestro sitio web se dedica a la venta de hardware y periféricos de computadora
 - Mantenimiento
 - Accesorios (Cables Auxiliares, Cables USB, Cables de Video)
 
-Este sitio está dirigido hacia el público general, pero específicamente a aquellos aficionados de la tecnología. Es decir, específico hacia adultos o jóvenes adultos con conocimientos previos de tecnolgía. Nos dedicamos en particular a la Industria del Gaming.
+Este sitio está dirigido hacia el público general, pero específicamente a aquellos aficionados de la tecnología. Es decir, específico hacia adultos o jóvenes adultos con conocimientos previos de tecnología. Nos dedicamos en particular a la Industria del Gaming.
 
 Por esta razón, nos enfocaremos en ofrecer productos de calidad y de alta gama, y con una descripción abundante de las especificaciones de cada artículo en nuestra página, para que así nuestro público específico se sienta más interesado y acompañado al momento de su compra.
 
