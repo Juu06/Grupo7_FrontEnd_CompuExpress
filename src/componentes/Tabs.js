@@ -6,8 +6,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Search from "./Search";
 import TextField from "./TextField";
-import Navegacion from "./Navegacion";
-import RangoPrecios from "./RangoPrecios";
 import FotosInicio from "./FotosInicio";
 import oferta from "../images/increase.png";
 import producto1 from "../images/product/img1.jpg";
@@ -17,12 +15,14 @@ import producto4 from "../images/product/img4.jpg";
 import perifericos from "../images/other/perifericos.jpg";
 import audio from "../images/other/audio.jpg";
 import like from "../images/icons/good_quality.png";
-import { Button, Link } from "@mui/material";
+import { Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SendIcon from "@mui/icons-material/Send";
 import Tienda from "./Tienda";
+import Card from "./Card";
+import Item from "./Item";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -62,39 +62,7 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  function Item(props) {
-    const { sx, ...other } = props;
-    return (
-      <Box
-        sx={{
-          bgcolor: (theme) =>
-            theme.palette.mode === "dark" ? "#101010" : "#fff",
-          color: (theme) =>
-            theme.palette.mode === "dark" ? "grey.300" : "grey.800",
-          border: "1px solid",
-          borderColor: (theme) =>
-            theme.palette.mode === "dark" ? "grey.800" : "grey.300",
-          p: 1,
-          m: 1,
-          borderRadius: 2,
-          fontSize: "0.875rem",
-          fontWeight: "700",
-          ...sx,
-        }}
-        {...other}
-      />
-    );
-  }
 
-  Item.propTypes = {
-    sx: PropTypes.oneOfType([
-      PropTypes.arrayOf(
-        PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])
-      ),
-      PropTypes.func,
-      PropTypes.object,
-    ]),
-  };
   return (
     <Box sx={{ width: "100%" }}>
       <Box
@@ -208,160 +176,44 @@ export default function BasicTabs() {
                   }}
                 >
                   <Item sx={{ gridColumn: "1", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto1}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto1,
+                        categoria: "PERIFÉRICOS / MOUSE",
+                        descripcion: "MOUSE REDRAGON IMPACT",
+                        precio: "450",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        450
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "2", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto2}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto2,
+                        categoria: "PERIFÉRICOS / TECLADOS",
+                        descripcion: "TECLADO LOGITECH K400",
+                        precio: "4500",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        4500
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "3", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto3}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto3,
+                        categoria: "PERIFÉRICOS / TECLADOS",
+                        descripcion: "TECLADO T-DAGGER ARENA",
+                        precio: "4000",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        4000
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "4", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto4}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto4,
+                        categoria: "AUDIO / PARLANTE",
+                        descripcion: "PARLANTE JBL GO 3",
+                        precio: "6500",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        6500
-                      </Typography>
-                    </Box>
                   </Item>
                 </Box>
               </div>
@@ -466,160 +318,44 @@ export default function BasicTabs() {
                   }}
                 >
                   <Item sx={{ gridColumn: "1", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto1}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto1,
+                        categoria: "PERIFÉRICOS / MOUSE",
+                        descripcion: "MOUSE REDRAGON IMPACT",
+                        precio: "450",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        450
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "2", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto2}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto2,
+                        categoria: "PERIFÉRICOS / TECLADOS",
+                        descripcion: "TECLADO LOGITECH K400",
+                        precio: "4500",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        4500
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "3", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto3}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto3,
+                        categoria: "PERIFÉRICOS / TECLADOS",
+                        descripcion: "TECLADO T-DAGGER ARENA",
+                        precio: "4000",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        4000
-                      </Typography>
-                    </Box>
                   </Item>
                   <Item sx={{ gridColumn: "4", height: "350px" }}>
-                    <img
-                      alt=""
-                      src={producto4}
-                      style={{
-                        height: "220px",
-                        width: "220px",
-                        marginBottom: "10px",
+                    <Card
+                      producto={{
+                        imagen: producto4,
+                        categoria: "AUDIO / PARLANTE",
+                        descripcion: "PARLANTE JBL GO 3",
+                        precio: "6500",
                       }}
                     />
-                    <Typography
-                      sx={{ display: "flex", color: "grey", fontSize: "14px" }}
-                    >
-                      PERIFÉRICOS / MOUSE
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        fontSize: "15px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      MOUSE REDRAGON IMPACT
-                    </Typography>
-                    <Box sx={{ display: "flex", marginTop: "10px" }}>
-                      <Button
-                        variant="outlined"
-                        color="inherit"
-                        sx={{ borderRadius: "15px", padding: "0px 6px" }}
-                      >
-                        AGREGAR AL CARRITO
-                      </Button>
-                      <Typography
-                        sx={{ marginLeft: "auto", fontWeight: "bold" }}
-                      >
-                        6500
-                      </Typography>
-                    </Box>
                   </Item>
                 </Box>
               </Box>
@@ -632,7 +368,7 @@ export default function BasicTabs() {
               bgcolor: "white",
               borderRadius: "10px",
               padding: 2,
-              height: "auto"
+              height: "auto",
             }}
           >
             <Tienda />
