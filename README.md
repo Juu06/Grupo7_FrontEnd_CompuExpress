@@ -28,16 +28,21 @@ Por esta razón, nos enfocaremos en ofrecer productos de calidad y de alta gama,
 
 ## Sitios de Referencia
 - CompraGamer: Nos hemos inspirado en este sitio web ya que es un e-commerce que vende artículos similares al nuestro y que apunta a un mismo público, además de que era un sitio que conocíamos por lo que ya estabamos familiarizados con su interfaz.
+
 url: https://compragamer.com/index.php
 
 - TecnoFel: Nos ha gustado la interfaz y colores utilizados por este sitio, aunque no pega con nuestra idea inicial ha sido una de las opciones a considerar.
+
 url: https://tecnofel.cl/nuestras-marcas/
 
 - BestStore: Nos inspiramos en los colores y orden de esta interfaz, teniendo tonos más oscuros y opciones de contacto y menu en el sector izquierdo y superior.
+
 url: https://www.beststore.cl/
 
 - WPG E-Commerce:Nos gustó la simpleza y eficacia de su interfaz, es consisa en los puntos más importantes y no sobrecarga de información ni imágenes o pop ups al usuario a quien nos dirigimos.
+
 url: https://www.wpg-ecommerce.com.ar/
 
 - Tecno-Site: Nos pareció una interfaz muy sobrecargada pero aún así el orden y las cosas que muestra nos interesó, nos gustó tener un apartado de ofertas o productos destacados.
+
 url: https://tienda.tecno-site.com/
