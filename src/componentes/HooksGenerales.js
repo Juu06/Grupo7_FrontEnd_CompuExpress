@@ -5,7 +5,7 @@ import {
   isArrayEqual,
 } from './FuncionesGenerales';
 //import makeStyles from '@mui/styles/makeStyles';
-import { Badge, Box, CircularProgress, Typography } from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
 import debounce from 'lodash.debounce';
 import { useSnackbar } from 'notistack';
 import useGetData from './useGetData';

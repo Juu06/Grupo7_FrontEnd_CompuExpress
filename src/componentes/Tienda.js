@@ -252,7 +252,7 @@ export default function Tienda() {
               transformOrigin: "bottom left",
               transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
               "&:before": { display: "none" },
-              "&.MuiSlider-valueLabelOpen": {
+              "& .MuiSlider-valueLabelOpen": {
                 transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
               },
               "& > *": {
@@ -280,7 +280,7 @@ export default function Tienda() {
         {productos.map((item, i) => {
           const column = (i % 4) + 1;
           return (
-            <Item sx={{ gridColumn: `${column}`, height: "350px" }}>
+            <Item sx={{ gridColumn: `${column}`, height: "100%" }}>
               <Card producto={item} key={i} />
             </Item>
           );

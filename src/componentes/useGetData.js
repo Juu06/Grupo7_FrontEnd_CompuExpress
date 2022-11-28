@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import { useAsyncError } from './HooksGenerales';
-import { useSnackbar } from 'notistack';
+//import { useSnackbar } from 'notistack';
 
 const useGetData = ({
   url = null,
@@ -35,7 +35,7 @@ const useGetData = ({
 
   const cleanData = () => setData(null); //Posible problema al actualizar estado y no estar montado el hook
 
-  const { enqueueSnackbar } = useSnackbar();
+  //const { enqueueSnackbar } = useSnackbar();
 
   // const [newValue, setNewValue] = useState(null);
 
@@ -87,11 +87,11 @@ const useGetData = ({
 
       //TODO: mejorar manejo de respuestas segun nivel de errores a http y codigo interno
 
-      if (response === null) {
+      /* if (response === null) {
         enqueueSnackbar('Se cayó la conexion, intente nuevamente mas tarde', {
           variant: 'error',
         });
-      }
+      } */
       if (response) {
         if (consoleDebug) console.log(response);
         setIsLoadingThrottled(false);

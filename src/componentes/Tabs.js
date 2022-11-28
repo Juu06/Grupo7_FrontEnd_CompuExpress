@@ -15,7 +15,7 @@ import producto4 from "../images/product/img4.jpg";
 import perifericos from "../images/other/perifericos.jpg";
 import audio from "../images/other/audio.jpg";
 import like from "../images/icons/good_quality.png";
-import { Link } from "@mui/material";
+import { Button, Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -23,6 +23,7 @@ import SendIcon from "@mui/icons-material/Send";
 import Tienda from "./Tienda";
 import Card from "./Card";
 import Item from "./Item";
+import Carrito from "./Carrito";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -56,8 +57,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
-  const [value, setValue] = React.useState(0);
+export default function BasicTabs({ articulosCarrito, setArticulosCarrito, value, setValue }) {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -98,13 +98,18 @@ export default function BasicTabs() {
             />
             <Tab
               sx={{ fontWeight: "bold", fontSize: 18 }}
-              label="Nosotros"
+              label="Carrito"
               {...a11yProps(2)}
             />
             <Tab
               sx={{ fontWeight: "bold", fontSize: 18 }}
-              label="Contacto"
+              label="Nosotros"
               {...a11yProps(3)}
+            />
+            <Tab
+              sx={{ fontWeight: "bold", fontSize: 18 }}
+              label="Contacto"
+              {...a11yProps(4)}
             />
           </Tabs>
         </Box>
@@ -376,6 +381,28 @@ export default function BasicTabs() {
         </TabPanel>
         <TabPanel value={value} index={2}>
           <Box
+            sx={{
+              bgcolor: "white",
+              borderRadius: "10px",
+              padding: 2,
+              height: "auto",
+            }}
+          >
+            {articulosCarrito.length === 0 ?
+              <Box>
+                <Typography> El carrito aun no tiene productos cargados, por favor vuelva a la tienda para seguir comprando </Typography>
+                <Button
+                  onClick={() => { setValue(1) }}
+                  sx={{ borderRadius: "15px", padding: "0px 6px", marginTop: '20px', bgcolor: "#565548", color: 'white', "&:hover, &:focus": { bgcolor: '#b3aa65'} }}
+                >
+                  VOLVER A LA TIENDA
+                </Button>
+              </Box>
+              : <Carrito articulosCarrito={articulosCarrito} setArticulosCarrito={setArticulosCarrito} />}
+          </Box>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <Box
             component="form"
             sx={{
               "& .MuiTextField-root": { m: 1, width: "80ch" },
@@ -434,7 +461,7 @@ export default function BasicTabs() {
             </Typography>
           </Box>
         </TabPanel>
-        <TabPanel value={value} index={3}>
+        <TabPanel value={value} index={4}>
           <TextField />
         </TabPanel>
       </Box>
@@ -482,9 +509,9 @@ export default function BasicTabs() {
               }}
             >
               <Link
-                href="#"
+                onClick={()=>{ setValue(3)}}
                 underline="hover"
-                sx={{ color: "white", textAlign: "left" }}
+                sx={{ color: "white", textAlign: "left", cursor: 'pointer' }}
               >
                 Nosotros
               </Link>
@@ -498,9 +525,9 @@ export default function BasicTabs() {
               }}
             >
               <Link
-                href="#"
+                onClick={()=>{ setValue(4)}}
                 underline="hover"
-                sx={{ color: "white", textAlign: "left" }}
+                sx={{ color: "white", textAlign: "left", cursor: 'pointer' }}
               >
                 Contacto
               </Link>
@@ -574,9 +601,9 @@ export default function BasicTabs() {
               }}
             >
               <Link
-                href="#"
+                onClick={()=>{ setValue(2)}}
                 underline="hover"
-                sx={{ color: "white", textAlign: "left" }}
+                sx={{ color: "white", textAlign: "left", cursor: 'pointer' }}
               >
                 Carrito
               </Link>
