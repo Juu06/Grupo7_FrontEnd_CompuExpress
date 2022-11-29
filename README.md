@@ -53,7 +53,7 @@ Link a Video del BackEnd:
 https://www.youtube.com/watch?v=ys1WifwEf3I
 
 Link a Video del FrontEnd:	
-https://www.youtube.com/watch?v=znI_spr9F4U
+https://youtu.be/R5c7Gz_JWSA
 
 
 ## Deploy del Front End
