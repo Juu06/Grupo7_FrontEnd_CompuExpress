@@ -46,3 +46,11 @@ url: https://www.wpg-ecommerce.com.ar/
 - Tecno-Site: Nos pareció una interfaz muy sobrecargada pero aún así el orden y las cosas que muestra nos interesó, nos gustó tener un apartado de ofertas o productos destacados.
 
 url: https://tienda.tecno-site.com/
+
+
+## Links a Videos de YouTube
+Link a Video del BackEnd: 	
+https://www.youtube.com/watch?v=ys1WifwEf3I
+
+Link a Video del FrontEnd:	
+https://www.youtube.com/watch?v=znI_spr9F4U
