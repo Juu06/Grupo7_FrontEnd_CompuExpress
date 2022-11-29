@@ -80,8 +80,8 @@ function ResponsiveAppBar({ articulosCarrito, setArticulosCarrito, setValue }) {
           </Box>
         </Box>
 
-        <CustomTooltip sx={{ width: '150px' }} placement="bottom-end" title={
-          <List sx={{ width: '150px' }}>
+        <CustomTooltip placement="bottom-end" title={
+          <List>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="Mi cuenta" />

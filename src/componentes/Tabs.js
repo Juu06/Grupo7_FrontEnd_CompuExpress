@@ -376,7 +376,7 @@ export default function BasicTabs({ articulosCarrito, setArticulosCarrito, value
               height: "auto",
             }}
           >
-            <Tienda />
+            <Tienda setArticulosCarrito={setArticulosCarrito} />
           </Box>
         </TabPanel>
         <TabPanel value={value} index={2}>

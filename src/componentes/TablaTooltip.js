@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import { Box } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import LinearProgress from '@mui/material/LinearProgress';
 
 export default function DataGridTooltip({ productos, setProductos }) {
@@ -38,6 +38,7 @@ export default function DataGridTooltip({ productos, setProductos }) {
             headerName: 'Cant.',
             type: 'number',
             sortable: false,
+            editable: true,
             flex: 0.5,
         },
         {
@@ -46,11 +47,14 @@ export default function DataGridTooltip({ productos, setProductos }) {
             description: 'Monto',
             sortable: false,
             flex: 1,
-            /* valueGetter: (params: GridValueGetterParams) =>
-              `${params.row.firstName || ''} ${params.row.lastName || ''}`, */
+            valueGetter: (params) => params.row.Precio * params.row.Cantidad
         },
     ];
+    React.useEffect(() => {
+        setMonto(productos.reduce(function (acc, obj) { return parseInt(acc) + parseInt(obj.Monto); }, 0));
+    }, [productos]);
 
+    const [monto, setMonto] = React.useState(productos.reduce(function (acc, obj) { return parseInt(acc) + parseInt(obj.Monto); }, 0));
     return (
         <Box sx={{ bgcolor: 'white', width: '100%' }}>
             <DataGrid
@@ -66,8 +70,18 @@ export default function DataGridTooltip({ productos, setProductos }) {
                 columns={columns}
                 pageSize={20}
                 rowsPerPageOptions={[5]}
-                experimentalFeatures={{ newEditingApi: true }}
                 hideFooter
             />
+            <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', marginTop: '10px' }}>
+                <Typography sx={{ marginLeft: 'auto' }}>Monto total a abonar ${parseInt(monto)} </Typography>
+                <Button
+                    variant="outlined"
+                    color="inherit"
+                    onClick={() => {}}
+                    sx={{ marginLeft: '10px', borderRadius: "15px", padding: "0px 6px" }}
+                >
+                    CONFIRMAR PEDIDO
+                </Button>
+            </Box>
         </Box>);
 }

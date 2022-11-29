@@ -6,6 +6,8 @@ import producto1 from "../images/product/img1.jpg";
 import producto2 from "../images/product/img2.jpg";
 import producto3 from "../images/product/img3.jpg";
 import producto4 from "../images/product/img4.jpg";
+import producto5 from "../images/product/img5.jpg";
+import producto6 from "../images/product/img6.jpg";
 import Item from "./Item";
 import useGetData from "./useGetData";
 
@@ -15,7 +17,7 @@ function valuetext(value) {
 
 const minDistance = 1000;
 
-export default function Tienda() {
+export default function Tienda({setArticulosCarrito}) {
   const [value1, setValue1] = React.useState([0, 5000]);
   const [internalForceUpate, setInternalForceUpdate] = React.useState(0);
   const handleChange2 = (event, newValue, activeThumb) => {
@@ -30,11 +32,13 @@ export default function Tienda() {
     }
   };
 
-  useGetData({
+  const { data } = useGetData({
     url: "http://localhost:9000/api/v1/productos/",
     forceUpdateId: internalForceUpate,
     params: {},
-    onSuccess: (response) => console.log(response),
+    onSuccess: (response) => {
+      console.log(response)
+    },
   });
 
   return (
@@ -277,11 +281,19 @@ export default function Tienda() {
           gridTemplateColumns: "repeat (4, 1fr)",
         }}
       >
-        {productos.map((item, i) => {
+        {data && data.map((item, i) => {
           const column = (i % 4) + 1;
           return (
             <Item sx={{ gridColumn: `${column}`, height: "100%" }}>
-              <Card producto={item} key={i} />
+              <Card
+                producto={{
+                  imagen: item.nombreProducto.includes("MOUSE") ? producto1 : item.nombreProducto.includes("TECLADO") ? producto3 : item.nombreProducto.includes("PARLANTE") ? producto4 : item.nombreProducto.includes("AURICULAR") ? producto5 : producto6,
+                  categoria: `${item?.tipoProducto?.nombreTipoProducto.toUpperCase()}/${item.nombreProducto.includes("MOUSE") ? 'MOUSE' : item.nombreProducto.includes("TECLADO") ? "TECLADO" : item.nombreProducto.includes("PARLANTE") ? "PARLANTE" : item.nombreProducto.includes("AURICULAR") ? "AURICULAR" : "MONITOR"}`,
+                  descripcion: item.nombreProducto,
+                  precio: "450"
+                }}
+                setArticulosCarrito={setArticulosCarrito}
+                key={i} />
             </Item>
           );
         })}
@@ -290,101 +302,3 @@ export default function Tienda() {
   );
 }
 
-const productos = [
-  {
-    imagen: producto1,
-    categoria: "PERIFÉRICOS / MOUSE",
-    descripcion: "MOUSE REDRAGON IMPACT",
-    precio: "450",
-  },
-  {
-    imagen: producto2,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO LOGITECH K400",
-    precio: "4500",
-  },
-  {
-    imagen: producto3,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO T-DAGGER ARENA",
-    precio: "4000",
-  },
-  {
-    imagen: producto4,
-    categoria: "AUDIO / PARLANTE",
-    descripcion: "PARLANTE JBL GO 3",
-    precio: "6500",
-  },
-  {
-    imagen: producto1,
-    categoria: "PERIFÉRICOS / MOUSE",
-    descripcion: "MOUSE REDRAGON IMPACT",
-    precio: "450",
-  },
-  {
-    imagen: producto2,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO LOGITECH K400",
-    precio: "4500",
-  },
-  {
-    imagen: producto3,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO T-DAGGER ARENA",
-    precio: "4000",
-  },
-  {
-    imagen: producto4,
-    categoria: "AUDIO / PARLANTE",
-    descripcion: "PARLANTE JBL GO 3",
-    precio: "6500",
-  },
-  {
-    imagen: producto1,
-    categoria: "PERIFÉRICOS / MOUSE",
-    descripcion: "MOUSE REDRAGON IMPACT",
-    precio: "450",
-  },
-  {
-    imagen: producto2,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO LOGITECH K400",
-    precio: "4500",
-  },
-  {
-    imagen: producto3,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO T-DAGGER ARENA",
-    precio: "4000",
-  },
-  {
-    imagen: producto4,
-    categoria: "AUDIO / PARLANTE",
-    descripcion: "PARLANTE JBL GO 3",
-    precio: "6500",
-  },
-  {
-    imagen: producto1,
-    categoria: "PERIFÉRICOS / MOUSE",
-    descripcion: "MOUSE REDRAGON IMPACT",
-    precio: "450",
-  },
-  {
-    imagen: producto2,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO LOGITECH K400",
-    precio: "4500",
-  },
-  {
-    imagen: producto3,
-    categoria: "PERIFÉRICOS / TECLADOS",
-    descripcion: "TECLADO T-DAGGER ARENA",
-    precio: "4000",
-  },
-  {
-    imagen: producto4,
-    categoria: "AUDIO / PARLANTE",
-    descripcion: "PARLANTE JBL GO 3",
-    precio: "6500",
-  },
-];

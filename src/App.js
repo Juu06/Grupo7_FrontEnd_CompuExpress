@@ -13,7 +13,21 @@ import { Box } from "@mui/material";
 
 function App() {
   const [value, setValue] = React.useState(0);
-  const [articulosCarrito, setArticulosCarrito] = React.useState([
+  const [articulosCarrito, setArticulosCarrito] = React.useState([]);
+
+  return (
+    <div className="App">
+      <React.Fragment>
+        <CssBaseline />
+        <AppBar articulosCarrito={articulosCarrito} setArticulosCarrito={setArticulosCarrito} setValue={setValue} />
+        <Tabs articulosCarrito={articulosCarrito} setArticulosCarrito={setArticulosCarrito} value={value} setValue={setValue} />
+      </React.Fragment>
+    </div>
+  );
+}
+
+export default App;
+/*
     {
       id: 1,
       Imagen: <img
@@ -104,17 +118,4 @@ function App() {
       Cantidad: 28,
       Monto: 'Enzo Fernandez'
     }
-  ]);
-
-  return (
-    <div className="App">
-      <React.Fragment>
-        <CssBaseline />
-        <AppBar articulosCarrito={articulosCarrito} setArticulosCarrito={setArticulosCarrito} setValue={setValue} />
-        <Tabs articulosCarrito={articulosCarrito} setArticulosCarrito={setArticulosCarrito} value={value} setValue={setValue} />
-      </React.Fragment>
-    </div>
-  );
-}
-
-export default App;
+  */
