@@ -59,5 +59,7 @@ https://www.youtube.com/watch?v=znI_spr9F4U
 ## Deploy del Front End
 
 Este deploy falla por cuestiones fuera de alcance, según el Deploy Log queda sin memoria:
+
 The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process
+
 (Comprobar funcionamiento de manera Local)
